@@ -1,18 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:38:46 by anschmit          #+#    #+#             */
-/*   Updated: 2025/03/19 12:47:21 by anschmit         ###   ########.fr       */
+/*   Created: 2025/03/20 14:20:03 by anschmit          #+#    #+#             */
+/*   Updated: 2025/03/24 15:23:02 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "zombie.hpp"
+#ifndef WEAPON_HPP
+#define WEAPON_HPP
 
-Zombie* newZombie(std::string name)
+#define YELLOW "\033[33m"
+#define BLUE "\033[36m"
+#define RESET "\033[0m"
+
+#include <iostream>
+
+class Weapon
 {
-	return new Zombie(name);
-}
+	private:
+			std::string _type;
+	public:
+			Weapon(const std::string& str);
+			const std::string& getType();
+			void setType(const std::string& newType);
+};
+
+#endif

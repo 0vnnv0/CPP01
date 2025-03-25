@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:38:46 by anschmit          #+#    #+#             */
-/*   Updated: 2025/03/19 12:47:21 by anschmit         ###   ########.fr       */
+/*   Created: 2025/03/20 14:40:01 by anschmit          #+#    #+#             */
+/*   Updated: 2025/03/24 15:31:00 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie* newZombie(std::string name)
+HumanB::HumanB(const std::string& name) : _name(name)
 {
-	return new Zombie(name);
+	
 }
+
+void HumanB::setWeapon(Weapon &weapon)
+{
+	_weapon = &weapon;
+}
+
+void	HumanB::attack()
+{
+	if (_weapon)
+		std::cout << BLUE << _name << RESET << " attacks with their " << BLUE << _weapon->getType() << RESET << std::endl;
+	else
+		std::cout << BLUE << _name << RESET << " attacks without a weapon" << std::endl;
+	}

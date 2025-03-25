@@ -5,14 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/13 17:38:14 by anschmit          #+#    #+#              #
-#    Updated: 2025/03/24 14:16:40 by anschmit         ###   ########.fr        #
+#    Created: 2025/03/20 14:18:47 by anschmit          #+#    #+#              #
+#    Updated: 2025/03/24 14:18:50 by anschmit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Brainz
+NAME = Violence
 
-SRC = zombie.cpp newZombie.cpp main.cpp randomChump.cpp
+SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
 
 CXX = c++
 

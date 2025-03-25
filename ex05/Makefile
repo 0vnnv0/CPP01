@@ -5,26 +5,26 @@
 #                                                     +:+ +:+         +:+      #
 #    By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/13 17:38:14 by anschmit          #+#    #+#              #
-#    Updated: 2025/03/24 14:16:40 by anschmit         ###   ########.fr        #
+#    Created: 2025/03/25 15:06:21 by anschmit          #+#    #+#              #
+#    Updated: 2025/03/25 15:13:37 by anschmit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Brainz
+NAME = Harl
 
-SRC = zombie.cpp newZombie.cpp main.cpp randomChump.cpp
+SRC = main.cpp Harl.cpp
 
 CXX = c++
 
 OBJS = $(SRC:.cpp=.o)
 
-CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98
 
 all: $(NAME)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
-	
+
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
@@ -34,6 +34,6 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all 
+re: fclean all
 
 .PHONY: all clean

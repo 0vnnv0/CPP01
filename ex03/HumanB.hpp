@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/13 17:38:46 by anschmit          #+#    #+#             */
-/*   Updated: 2025/03/19 12:47:21 by anschmit         ###   ########.fr       */
+/*   Created: 2025/03/20 14:39:44 by anschmit          #+#    #+#             */
+/*   Updated: 2025/03/24 15:30:34 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "zombie.hpp"
+#ifndef HUMANB_HPP
+#define HUMANB_HPP
 
-Zombie* newZombie(std::string name)
+#include <iostream>
+#include "Weapon.hpp"
+
+class HumanB
 {
-	return new Zombie(name);
-}
+	private:
+		std::string _name;
+		Weapon *_weapon;
+		
+	public:
+		HumanB(const std::string& name);
+		void setWeapon(Weapon &weapon);
+		void attack();
+	};
+
+#endif

@@ -5,14 +5,15 @@
 #                                                     +:+ +:+         +:+      #
 #    By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/03/13 17:38:14 by anschmit          #+#    #+#              #
-#    Updated: 2025/03/24 14:16:40 by anschmit         ###   ########.fr        #
+#    Created: 2025/03/19 13:12:43 by anschmit          #+#    #+#              #
+#    Updated: 2025/03/24 14:16:53 by anschmit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = Brainz
 
-SRC = zombie.cpp newZombie.cpp main.cpp randomChump.cpp
+NAME = MoarBrainz
+
+SRC = Zombie.cpp zombieHorde.cpp main.cpp
 
 CXX = c++
 
